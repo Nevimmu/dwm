@@ -2,6 +2,7 @@
 
 /* appearance */
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
+static const unsigned int gappx     = 15;        /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
@@ -11,12 +12,13 @@ static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
 static const char col_gray4[]       = "#eeeeee";
-static const char col_cyan[]        = "#400078";
+static const char col_cyan[]        = "#005577";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
 	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
 };
+static const int focusonwheel       = 0;
 
 /* tagging */
 static const char *tags[] = { "一", "二", "三", "四", "五", "六", "七", "八", "九" };
@@ -95,6 +97,11 @@ static Key keys[] = {
 	TAGKEYS(                17,                    7)                 // 8
 	TAGKEYS(                18,                    8)                 // 9
 	{ MODKEY|ShiftMask,     24,    quit,           {0} },             // a
+	{ MODKEY,               20,	   setgaps,        {.i = -1 } },      // )
+	{ MODKEY,               21,	   setgaps,        {.i = +1 } },      // =
+	{ MODKEY|ShiftMask,     20,    setgaps,        {.i = 0  } },      // )
+	{ MODKEY|ShiftMask,     21,    setgaps,        {.i = 15 } },      // )
+
 };
 
 /* button definitions */
