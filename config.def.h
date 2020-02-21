@@ -2,6 +2,7 @@
 
 /* appearance */
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
+static const unsigned int gappx     = 15;        /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
@@ -94,6 +95,11 @@ static Key keys[] = {
 	TAGKEYS(                17,                    7)                 // 8
 	TAGKEYS(                18,                    8)                 // 9
 	{ MODKEY|ShiftMask,     24,    quit,           {0} },             // a
+	{ MODKEY,               20,	   setgaps,        {.i = -1 } },      // )
+	{ MODKEY,               21,	   setgaps,        {.i = +1 } },      // =
+	{ MODKEY|ShiftMask,     20,    setgaps,        {.i = 0  } },      // )
+	{ MODKEY|ShiftMask,     21,    setgaps,        {.i = 15 } },      // )
+
 };
 
 /* button definitions */
