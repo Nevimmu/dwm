@@ -77,8 +77,8 @@ static Key keys[] = {
 	{ MODKEY,               28,    setlayout,      {.v = &layouts[0]} }, // t
 	{ MODKEY,               47,    setlayout,      {.v = &layouts[1]} }, // m
 //	{ MODKEY,               41,    setlayout,      {.v = &layouts[2]} }, // f
-	{ MODKEY,               65,    setlayout,      {0} },             // Erase
-	{ MODKEY|ShiftMask,     65,    togglefloating, {0} },             // Erase
+	{ MODKEY,               22,    setlayout,      {0} },             // Erase
+	{ MODKEY|ShiftMask,     22,    togglefloating, {0} },             // Erase
 	{ MODKEY,               19,    view,           {.ui = ~0 } },     // 0
 	{ MODKEY|ShiftMask,     19,    tag,            {.ui = ~0 } },     // 0
 	{ MODKEY,               58,    focusmon,       {.i = -1 } },      // comma
